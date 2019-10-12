@@ -73,24 +73,26 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <ToggleButton
-            android:id="@+id/toggleButton"
+            android:id="@+id/btn_biginner"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="biginner"
             android:text="@string/biginner"
             android:textColor="#FFFFFF"
             android:textOff="@string/biginner"
             android:textOn="@string/biginner" />
 
         <ToggleButton
-            android:id="@+id/toggleButton2"
+            android:id="@+id/btn_baller"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="16dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
+            android:onClick="baller"
             android:text="@string/baller"
             android:textColor="#FFFFFF"
             android:textOff="@string/baller"
