@@ -5,12 +5,14 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_league.*
-import mitofit.com.swoosh.Utilities.EXTRA_LEAGUE
+import mitofit.com.swoosh.Model.Player
+
 import mitofit.com.swoosh.R
+import mitofit.com.swoosh.Utilities.EXTRA_PLAYER
 
 class LeagueActivity : BaseActivity() {
 
-    var selectedLeague = ""
+    var player = Player("","")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,9 +20,9 @@ class LeagueActivity : BaseActivity() {
     }
 
     fun leagueNextClicked(view: View) {
-        if (selectedLeague != "") {
+        if (player.league != "") {
             val intentSkill = Intent(this, SkillActivity::class.java)
-            intentSkill.putExtra(EXTRA_LEAGUE,selectedLeague)
+            intentSkill.putExtra(EXTRA_PLAYER,player)
             startActivity(intentSkill)
         } else {
             Toast.makeText(this, "Please select a league.", Toast.LENGTH_SHORT).show()
@@ -32,14 +34,14 @@ class LeagueActivity : BaseActivity() {
             btn_womens.isChecked = false
             btn_coed.isChecked = false
 
-            selectedLeague = "Mens"
+          player.league = "Mens"
         }
 
         fun onWomensClicked(view: View) {
             btn_mens.isChecked = false
             btn_coed.isChecked = false
 
-            selectedLeague = "Womens"
+            player.league = "Womens"
 
 
         }
@@ -48,7 +50,7 @@ class LeagueActivity : BaseActivity() {
             btn_mens.isChecked = false
             btn_womens.isChecked = false
 
-            selectedLeague = "Coed"
+           player.league = "Coed"
 
         }
 
