@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SkillActivity">
+    tools:context=".Contoroler.SkillActivity">
 
     <ImageView
         android:id="@+id/imageView4"
@@ -21,7 +21,7 @@
         android:contentDescription="@string/background_image" />
 
     <Button
-        android:id="@+id/btn_getStarted2"
+        android:id="@+id/btn_finish"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -29,6 +29,7 @@
         android:layout_marginBottom="16dp"
         android:background="@drawable/swoosh_button"
         android:fontFamily="@font/montserrat"
+        android:onClick="onSkillFinishClicked"
         android:text="@string/finish"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
@@ -73,17 +74,20 @@
         app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <ToggleButton
-            android:id="@+id/btn_biginner"
+            android:id="@+id/btn_beginner"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginEnd="16dp"
             android:layout_weight="1"
             android:background="@drawable/swoosh_toggle"
+            android:fontFamily="@font/montserrat"
             android:onClick="biginner"
-            android:text="@string/biginner"
+            android:text="BEGINNER"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="#FFFFFF"
-            android:textOff="@string/biginner"
-            android:textOn="@string/biginner" />
+            android:textOff="BEGINNER"
+            android:textOn="BEGINNER"
+            android:textSize="14sp" />
 
         <ToggleButton
             android:id="@+id/btn_baller"

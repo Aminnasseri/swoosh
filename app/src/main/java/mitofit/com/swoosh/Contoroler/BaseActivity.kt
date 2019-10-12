@@ -1,8 +1,9 @@
-package mitofit.com.swoosh
+package mitofit.com.swoosh.Contoroler
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import mitofit.com.swoosh.R
 
 open class BaseActivity : AppCompatActivity() {
     val Tag ="LifeCycle"

@@ -1,9 +1,9 @@
-package mitofit.com.swoosh
+package mitofit.com.swoosh.Contoroler
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import mitofit.com.swoosh.R
 
 class WelcomeActivity : BaseActivity() {
 
@@ -12,7 +12,7 @@ class WelcomeActivity : BaseActivity() {
         setContentView(R.layout.activity_main)
 
         btn_getStarted.setOnClickListener{
-            val intentleague = Intent(this,LeagueActivity::class.java)
+            val intentleague = Intent(this, LeagueActivity::class.java)
             startActivity(intentleague)
         }
 

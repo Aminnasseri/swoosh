@@ -1,10 +1,12 @@
-package mitofit.com.swoosh
+package mitofit.com.swoosh.Contoroler
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_league.*
+import mitofit.com.swoosh.Utilities.EXTRA_LEAGUE
+import mitofit.com.swoosh.R
 
 class LeagueActivity : BaseActivity() {
 
